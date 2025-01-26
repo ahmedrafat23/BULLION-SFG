@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Stocks Data</h1>
+<div class="card-container">
+    {% for stock in stocks %}
+    <div class="card">
+        <h3>{{ stock.name }}</h3>
+        <p>Price: {{ stock.price }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

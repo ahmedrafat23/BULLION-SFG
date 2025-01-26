@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Metals Data</h1>
+<input type="text" id="search" placeholder="Search metals..." oninput="filterList()">
+<div class="card-container">
+    {% for metal, price in metals.items() %}
+    <div class="card">
+        <h3>{{ metal }}</h3>
+        <p>Price: {{ price }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

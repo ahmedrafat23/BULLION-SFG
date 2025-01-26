@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+        <a href="/metals" class="{{ 'active' if request.path == '/metals' else '' }}">Metals</a>
+        <a href="/stocks" class="{{ 'active' if request.path == '/stocks' else '' }}">Stocks</a>
+        <a href="/currency" class="{{ 'active' if request.path == '/currency' else '' }}">Currency</a>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
+
